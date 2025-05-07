@@ -1,30 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# #  1D Diffusion Model
-
-# https://github.com/csdms/roadshow-diffusion
-
-# Here we develop a one-dimensional model of diffusion.
-# It assumes a constant diffusivity.
-# It uses a regular grid.
-# It has a step function for an initial condition.
-# It has fixed boundary conditions.
-
-# Here is the diffusion equation:
-
-# $$ \frac{\partial C}{\partial t} = D\frac{\partial^2 C}{\partial x^2} $$
-
-# Here is the discretized version of the diffusion equation we will solve with our model
-
-# $$ C^{t+1}_x = C^t_x + {D \Delta t \over \Delta x^2} (C^t_{x+1} - 2C^t_x + C^t_{x-1}) $$
-
-# This is the FTCS scheme as described by Slingerland and Kump (2011)
-
-# We'll use two libraries , NumPy (for array) & Matplotlib (for plotting, that aren't a part of the core Python distribution.
-
-# In[ ]:
-
+"""A 1D Diffusion Model."""
 
 import numpy as np
 import matplotlib.pyplot as plt
